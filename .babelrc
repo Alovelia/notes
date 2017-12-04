@@ -1,0 +1,40 @@
+{
+  "presets": ["env", "react", "stage-0", "flow"],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-flow-comments",
+        "ramda",
+        ["lodash", { "id": ["lodash", "recompose"] }],
+        "add-module-exports",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-react-remove-prop-types",
+        "transform-react-pure-class-to-function",
+        "transform-promise-to-bluebird",
+        "transform-es2015-modules-commonjs",
+        "transform-decorators-legacy"
+      ]
+    },
+    "development": {
+      "plugins": [
+        "transform-flow-comments",
+        "add-module-exports",
+        "transform-promise-to-bluebird",
+        "transform-es2015-modules-commonjs",
+        "transform-decorators-legacy",
+        "react-hot-loader/babel"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-flow-comments",
+        "dynamic-import-node",
+        "add-module-exports",
+        "transform-promise-to-bluebird",
+        "transform-es2015-modules-commonjs",
+        "transform-decorators-legacy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "setupFiles": [
+    "<rootDir>/config/jest/polyfills.js",
+    "<rootDir>/config/jest/enzyme-adapter.js"
+  ],
+  "rootDir": "../../",
+  "roots": ["<rootDir>/src"],
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+    "!**/src/index.js",
+    "!**/src/__app__/store.js",
+    "!**/src/registerServiceWorker.js",
+    "!**/__mock_tests__/**",
+    "!**/config/jest/polyfills.js",
+    "!**/config/jest/enzyme-adapter.js"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "testPathIgnorePatterns": [
+    "<rootDir>[/\\\\](build|docs|node_modules|config)[/\\\\]",
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.js?(x)",
+    "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest",
+    "^.*\\.(css|less|styl|scss|sass)$": "<rootDir>/config/jest/css-transform.js",
+    "^.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/file-transform.js",
+    "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/file-transform.js",
+    "^.*[.](jpg|JPG|gif|GIF|png|PNG|less|LESS)$": "<rootDir>/config/jest/empty-transform.js"
+  },
+  "unmockedModulePathPatterns": [
+    "react",
+    "react-dom",
+    "react-addons-test-utils"
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/config/jest/helpers/index.js",
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^src/(.+)": "<rootDir>/src/$1",
+    "^app/(.+)": "<rootDir>/src/__app__/$1",
+    "^common/(.+)": "<rootDir>/src/__common__/$1",
+    "^global-config/(.+)": "<rootDir>/config/$1"
+  }
+}
