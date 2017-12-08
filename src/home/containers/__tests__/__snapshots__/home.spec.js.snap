@@ -29,6 +29,7 @@ ShallowWrapper {
     "key": null,
     "nodeType": "class",
     "props": Object {
+      "get": [Function],
       "store": Object {
         "dispatch": [Function],
         "getAction": [Function],
@@ -58,8 +59,6 @@ ShallowWrapper {
         },
         "unsubscribe": undefined,
       },
-      "trigger": [Function],
-      "username": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -71,6 +70,7 @@ ShallowWrapper {
       "key": null,
       "nodeType": "class",
       "props": Object {
+        "get": [Function],
         "store": Object {
           "dispatch": [Function],
           "getAction": [Function],
@@ -100,8 +100,6 @@ ShallowWrapper {
           },
           "unsubscribe": undefined,
         },
-        "trigger": [Function],
-        "username": undefined,
       },
       "ref": null,
       "rendered": null,

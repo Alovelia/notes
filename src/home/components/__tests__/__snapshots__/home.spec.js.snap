@@ -4,7 +4,7 @@ exports[`<Home /> when initializing, the expected output is rendered 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withState(HomeComponent)
+  Symbol(enzyme.__unrendered__): <HomeComponent
     trigger={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -17,31 +17,99 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": null,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "setUpdate": [Function],
-      "trigger": [Function],
-      "update": false,
-      "username": "",
+      "children": Array [
+        <div
+          className="folders"
+        >
+          FOLDERS
+        </div>,
+        <div
+          className="notes"
+        >
+          NOTES
+        </div>,
+      ],
+      "className": "clearfix",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "FOLDERS",
+          "className": "folders",
+        },
+        "ref": null,
+        "rendered": "FOLDERS",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "NOTES",
+          "className": "notes",
+        },
+        "ref": null,
+        "rendered": "NOTES",
+        "type": "div",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": null,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "setUpdate": [Function],
-        "trigger": [Function],
-        "update": false,
-        "username": "",
+        "children": Array [
+          <div
+            className="folders"
+          >
+            FOLDERS
+          </div>,
+          <div
+            className="notes"
+          >
+            NOTES
+          </div>,
+        ],
+        "className": "clearfix",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "FOLDERS",
+            "className": "folders",
+          },
+          "ref": null,
+          "rendered": "FOLDERS",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "NOTES",
+            "className": "notes",
+          },
+          "ref": null,
+          "rendered": "NOTES",
+          "type": "div",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

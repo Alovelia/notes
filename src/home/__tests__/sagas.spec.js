@@ -7,31 +7,23 @@ import { getData, getDataSaga } from '../sagas';
 
 describe('getData Saga', () => {
   let getDataGenerator;
-  const username = 'troll';
+  let callDescriptor;
+  const folders = [];
   // We have to test twice, once for a successful load and once for an unsuccessful one
   // so we do all the stuff that happens beforehand automatically in the beforeEach
   beforeEach(() => {
     getDataGenerator = getData();
+    callDescriptor = getDataGenerator.next().value;
+  });
 
-    const selectDescriptor = getDataGenerator.next().value;
-    expect(selectDescriptor).toMatchSnapshot();
-
-    const callDescriptor = getDataGenerator.next(username).value;
+  it('should call api at first', () => {
     expect(callDescriptor).toMatchSnapshot();
   });
 
   it('should dispatch the getSuccess action if it requests the data successfully', () => {
-    const response = {
-      username
-    };
+    const response = folders;
     const putDescriptor = getDataGenerator.next(response).value;
-    expect(putDescriptor).toEqual(put(ACTION.getSuccess(username)));
-  });
-
-
-  it('should dispatch SOMETHING_ELSE if it requests the data successfully', () => {
-    const somethingElseDescriptor = getDataGenerator.next().value;
-    expect(somethingElseDescriptor).toMatchSnapshot();
+    expect(putDescriptor).toEqual(put(ACTION.getSuccess(folders)));
   });
 
   it('should call the getError action if the response errors', () => {

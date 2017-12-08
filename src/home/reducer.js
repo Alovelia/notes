@@ -9,14 +9,16 @@ export const TYPE = constants('home', [
 export const ACTION = actions(TYPE);
 
 // The initial state
-export const initialState = _.fromJS({});
+export const initialState = _.fromJS({
+  folders: []
+});
 
 export default handleActions({
   [TYPE.GET_SUCCESS]: getSuccess,
   //†handler
 }, initialState);
 
-function getSuccess(state) {
-  return state.set('username', 'username');
+function getSuccess(state, { payload }) {
+  return state.set('folders', _.fromJS(payload));
 }
 //†reducer

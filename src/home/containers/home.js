@@ -2,25 +2,28 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-import { ApiError } from 'common/error-core';
+import PropTypes from 'prop-types';
 import Home from '../components/home';
 import { ACTION } from '../reducer';
-import { makeSelectUsername } from '../selectors';
+// import { makeSelectUsername } from '../selectors';
 
 export class HomeContainer extends Component {
   componentDidMount() {
-    Promise.reject(new ApiError());
+    // ajax
+    this.props.get();
   }
   render() {
     return <Home {...this.props} />;
   }
 }
 
-const mapStateToProps = createStructuredSelector({
-  username: makeSelectUsername()
-});
+HomeContainer.propTypes = {
+  get: PropTypes.func.isRequired
+};
+
+const mapStateToProps = createStructuredSelector({});
 const mapDispatchToProps = {
-  trigger: ACTION.get,
+  get: ACTION.get,
   //†action
 };
 

@@ -8,11 +8,12 @@ describe('home reducer', () => {
   });
 
   it(`should handle ${TYPE.GET_SUCCESS}`, () => {
+    const folders = [];
     expect(
       reducer(initialState, {
         type: TYPE.GET_SUCCESS,
-        payload: undefined
-      }).get('username')
-    ).to.equal('username');
+        payload: folders
+      }).get('folders')
+    ).to.equal(fromJS(folders));
   });
 });

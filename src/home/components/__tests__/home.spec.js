@@ -20,12 +20,4 @@ describe('<Home />', () => {
     wrapper = shallow(<Home {...props} />);
     expect(wrapper).toMatchSnapshot();
   });
-  it('should trigger action', () => {
-    const props = {
-      trigger: stub
-    };
-    shallow(<Home {...props} />).dive().find('button').simulate('click');
-    expect(stub).to.have.been.called();
-    expect(stub).to.have.been.calledWith('payload');
-  });
 });
