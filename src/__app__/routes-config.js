@@ -1,11 +1,16 @@
-export const DEFAULT_PAGE = 'home';
+export const DEFAULT_PAGE = 'folders';
 
 export const routingConfig = {
-  'home': {
+  'folders': {
     path: '/',
-    name: 'home',
+    name: 'folders',
     title: 'home.title',
     // permissionId: 'WELCOME',
+  },
+  'notes': {
+    path: '/:id',
+    name: 'notes',
+    title: 'home.title',
   },
   //†route
 };

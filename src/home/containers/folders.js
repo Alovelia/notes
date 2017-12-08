@@ -3,20 +3,20 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
-import Home from '../components/home';
+import Folders from '../components/folders';
 import { ACTION } from '../reducer';
 import { makeSelectFolders } from '../selectors';
 
-export class HomeContainer extends Component {
+export class FoldersContainer extends Component {
   componentDidMount() {
     this.props.get(); // dispatch action to start ajax request for folders
   }
   render() {
-    return <Home {...this.props} />;
+    return <Folders {...this.props} />;
   }
 }
 
-HomeContainer.propTypes = {
+FoldersContainer.propTypes = {
   get: PropTypes.func.isRequired
 };
 
@@ -30,5 +30,5 @@ const mapDispatchToProps = {
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-)(HomeContainer);
+)(FoldersContainer);
 

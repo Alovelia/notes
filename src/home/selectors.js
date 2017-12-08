@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 
 export const selectHome = state => state.get('home');
 
-export const makeSelectUsername = () => createSelector(
+export const makeSelectFolders = () => createSelector(
   selectHome,
-  homeState => homeState && homeState.get('username')
+  homeState => homeState && homeState.get('folders').toJS()
 );

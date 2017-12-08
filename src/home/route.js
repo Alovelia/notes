@@ -2,7 +2,8 @@ import { routingConfig } from 'app/routes-config';
 import { errorLoading } from 'common/error-core';
 import { getAsyncInjectors } from 'common/async-injectors';
 
-const { path, name } = routingConfig['home'];
+const { path, name } = routingConfig['folders'];
+const { path: notesPath, name: notesName } = routingConfig['notes'];
 
 export default (store) => {
   // #if process.env.NODE_ENV === 'production'
@@ -38,5 +39,30 @@ export default (store) => {
       }
     },
     // #endif
+    childRoutes: [
+      {
+        path: notesPath,
+        name: notesName,
+        // #if process.env.NODE_ENV !== 'production'
+        // eslint-disable-next-line
+      component: require('./containers/notes').default,
+        // #endif
+        // #if process.env.NODE_ENV === 'production'
+        async getComponent(nextState, cb) {
+          try {
+            const [
+              component,
+            ] = await Promise.all([
+            import('./containers/notes' /* webpackChunkName: "notes" */),
+            ]);
+            cb(null, component.default);
+          } catch (e) {
+            errorLoading(e);
+          }
+        },
+        // #endif
+      },
+      //†child_route
+    ]
   };
 };

@@ -29,6 +29,7 @@ ShallowWrapper {
     "key": null,
     "nodeType": "class",
     "props": Object {
+      "folders": undefined,
       "get": [Function],
       "store": Object {
         "dispatch": [Function],
@@ -70,6 +71,7 @@ ShallowWrapper {
       "key": null,
       "nodeType": "class",
       "props": Object {
+        "folders": undefined,
         "get": [Function],
         "store": Object {
           "dispatch": [Function],
