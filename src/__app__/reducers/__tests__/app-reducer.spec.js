@@ -13,9 +13,9 @@ describe('app reducer', () => {
       reducer(initialState, {
         type: LOCATION_CHANGE,
         payload: {
-          pathname: '/home'
+          pathname: '/'
         }
       }).get('activePage')
-    ).to.equal(fromJS({ 'path': '/', 'name': 'home', 'title': 'home.title' }));
+    ).to.equal(fromJS({ 'path': '/', 'name': 'folders', 'title': 'home.title' }));
   });
 });

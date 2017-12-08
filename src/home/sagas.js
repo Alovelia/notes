@@ -14,6 +14,16 @@ export function* getData() {
   }
 }
 
+export function* getNotes({ payload: id }) {
+  try {
+    // Call ajax
+    const response = yield call(api.get, `/folders/${id}/notes`);
+    yield put(ACTION.getNotesSuccess(response));
+  } catch (err) {
+    yield put(ACTION.getNotesError(err));
+  }
+}
+
 /**
  * Root saga manages watcher lifecycle
  */
@@ -21,7 +31,11 @@ export function* getDataSaga() {
   yield takeLatest(TYPE.GET, getData);
 }
 
+export function* getNotesSaga() {
+  yield takeLatest(TYPE.GET_NOTES, getNotes);
+}
 // Bootstrap sagas
 export default [
   getDataSaga,
+  getNotesSaga,
 ];

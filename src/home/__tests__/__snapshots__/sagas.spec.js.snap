@@ -12,3 +12,16 @@ Object {
   },
 }
 `;
+
+exports[`getNotesData Saga should call api at first 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "/folders/id/notes",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;

@@ -4,7 +4,7 @@ exports[`<LayoutConnected /> has proper component 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Layout)
+  Symbol(enzyme.__unrendered__): <Connect(withRouter(ParamsDispatcher))
     store={
       Object {
         "dispatch": [Function],
@@ -27,9 +27,8 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": null,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
-      "children": null,
       "store": Object {
         "dispatch": [Function],
         "getAction": [Function],
@@ -59,7 +58,7 @@ ShallowWrapper {
         },
         "unsubscribe": undefined,
       },
-      "title": "home.title",
+      "updateParams": [Function],
     },
     "ref": null,
     "rendered": null,
@@ -69,9 +68,8 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": null,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
-        "children": null,
         "store": Object {
           "dispatch": [Function],
           "getAction": [Function],
@@ -101,7 +99,7 @@ ShallowWrapper {
           },
           "unsubscribe": undefined,
         },
-        "title": "home.title",
+        "updateParams": [Function],
       },
       "ref": null,
       "rendered": null,

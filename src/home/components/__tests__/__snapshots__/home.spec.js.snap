@@ -23,13 +23,11 @@ ShallowWrapper {
         <div
           className="folders"
         >
-          FOLDERS
+          <Connect(FoldersContainer) />
         </div>,
         <div
           className="notes"
-        >
-          NOTES
-        </div>,
+        />,
       ],
       "className": "clearfix",
     },
@@ -40,11 +38,19 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "FOLDERS",
+          "children": <Connect(FoldersContainer) />,
           "className": "folders",
         },
         "ref": null,
-        "rendered": "FOLDERS",
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": "div",
       },
       Object {
@@ -52,11 +58,11 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "NOTES",
+          "children": null,
           "className": "notes",
         },
         "ref": null,
-        "rendered": "NOTES",
+        "rendered": null,
         "type": "div",
       },
     ],
@@ -72,13 +78,11 @@ ShallowWrapper {
           <div
             className="folders"
           >
-            FOLDERS
+            <Connect(FoldersContainer) />
           </div>,
           <div
             className="notes"
-          >
-            NOTES
-          </div>,
+          />,
         ],
         "className": "clearfix",
       },
@@ -89,11 +93,19 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "FOLDERS",
+            "children": <Connect(FoldersContainer) />,
             "className": "folders",
           },
           "ref": null,
-          "rendered": "FOLDERS",
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": "div",
         },
         Object {
@@ -101,11 +113,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "NOTES",
+            "children": null,
             "className": "notes",
           },
           "ref": null,
-          "rendered": "NOTES",
+          "rendered": null,
           "type": "div",
         },
       ],

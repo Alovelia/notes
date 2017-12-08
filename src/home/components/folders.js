@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 class Folders extends Component {
   render() {
     return (<div>
-      {this.props.folders.map(item => <div key={item._id}>{item.title}</div>)}
+      {this.props.folders.map((item) => {
+        return (<div key={item._id}>
+          <Link to={`/${item._id}`}>
+            {item.title}
+          </Link></div>);
+      }
+      )}
     </div>);
   }
 }
@@ -14,3 +21,4 @@ Folders.propTypes = {
 };
 
 export default Folders;
+

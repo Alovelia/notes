@@ -8,7 +8,9 @@ class HomeComponent extends Component {
   render() {
     // console.info(this.props.folders);
     return (<div className="clearfix">
-      <div className="folders"><Folders /></div>
+      <div className="folders">
+        <Folders />
+      </div>
       <div className="notes">
         { this.props.children }
       </div>

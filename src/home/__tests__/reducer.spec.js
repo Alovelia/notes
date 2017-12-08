@@ -16,4 +16,14 @@ describe('home reducer', () => {
       }).get('folders')
     ).to.equal(fromJS(folders));
   });
+
+  it(`should handle ${TYPE.GET_NOTES_SUCCESS}`, () => {
+    const notes = [];
+    expect(
+      reducer(initialState, {
+        type: TYPE.GET_NOTES_SUCCESS,
+        payload: notes
+      }).get('notes')
+    ).to.equal(fromJS(notes));
+  });
 });

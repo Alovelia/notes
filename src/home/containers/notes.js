@@ -9,7 +9,14 @@ import { ACTION } from '../reducer';
 
 export class NotesContainer extends Component {
   componentDidMount() {
-    // this.props.get(); // dispatch action to start ajax request for notes
+    const noteId = this.props.params.id;
+    this.props.getNotes(noteId); // dispatch action to start ajax request for notes
+  }
+  componentWillReceiveProps(nextProps) {
+    if (this.props.params.id !== nextProps.params.id) {
+      const noteId = nextProps.params.id;
+      this.props.getNotes(noteId);
+    }
   }
   render() {
     return <Notes {...this.props} />;
@@ -17,14 +24,15 @@ export class NotesContainer extends Component {
 }
 
 NotesContainer.propTypes = {
-  // get: PropTypes.func.isRequired
+  getNotes: PropTypes.func.isRequired,
+  params: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   // notes: makeSelectNotes()
 });
 const mapDispatchToProps = {
-  // get: ACTION.get,
+  getNotes: ACTION.getNotes,
   //†action
 };
 

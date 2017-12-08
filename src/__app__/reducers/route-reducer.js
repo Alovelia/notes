@@ -3,7 +3,8 @@ import handleActions from 'redux-actions/lib/handleActions';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import _ from 'common/helpers';
 
-export const TYPE = constants('route', [
+export const TYPE = constants('@@router', [
+  'UPDATE_PARAMS',
   //†type
 ]);
 export const ACTION = actions(TYPE);
@@ -11,6 +12,7 @@ export const ACTION = actions(TYPE);
 // Initial routing state
 export const initialState = _.fromJS({
   locationBeforeTransitions: null,
+  params: {}
 });
 
 /**
@@ -18,6 +20,7 @@ export const initialState = _.fromJS({
  */
 export default handleActions({
   [LOCATION_CHANGE]: updateLocation,
+  [TYPE.UPDATE_PARAMS]: updateParams,
   //†handler
 }, initialState);
 
@@ -30,5 +33,9 @@ export function updateLocation(state, { payload }) {
   return state.merge({
     locationBeforeTransitions: payload,
   });
+}
+
+export function updateParams(state, { payload }) {
+  return state.set('params', _.fromJS(payload));
 }
 //†reducer

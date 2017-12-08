@@ -3,7 +3,12 @@ import { createMockTask } from 'redux-saga/lib/utils';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import { ACTION, TYPE } from '../reducer';
 
-import { getData, getDataSaga } from '../sagas';
+import {
+  getData,
+  getDataSaga,
+  getNotes,
+  getNotesSaga,
+} from '../sagas';
 
 describe('getData Saga', () => {
   let getDataGenerator;
@@ -40,5 +45,44 @@ describe('getDataSaga Saga', () => {
   it(`should start task to watch for ${TYPE.GET} action`, () => {
     const takeLatestDescriptor = getDataSagaGenerator.next().value;
     expect(takeLatestDescriptor).toEqual(takeLatest(TYPE.GET, getData));
+  });
+});
+
+describe('getNotesData Saga', () => {
+  let getDataGenerator;
+  let callDescriptor;
+  const notes = [];
+  const action = {
+    payload: 'id'
+  };
+  beforeEach(() => {
+    getDataGenerator = getNotes(action);
+    callDescriptor = getDataGenerator.next().value;
+  });
+
+  it('should call api at first', () => {
+    expect(callDescriptor).toMatchSnapshot();
+  });
+
+  it('should dispatch the getNotesSuccess action if it requests the data successfully', () => {
+    const response = notes;
+    const putDescriptor = getDataGenerator.next(response).value;
+    expect(putDescriptor).toEqual(put(ACTION.getNotesSuccess(notes)));
+  });
+
+  it('should call the getNotesError action if the response errors', () => {
+    const response = new Error('Some error');
+    const putDescriptor = getDataGenerator.throw(response).value;
+    expect(putDescriptor).toEqual(put(ACTION.getNotesError(response)));
+  });
+});
+
+describe('getNotesSaga Saga', () => {
+  const getDataSagaGenerator = getNotesSaga();
+  const mockedTask = createMockTask();
+
+  it(`should start task to watch for ${TYPE.GET_NOTES} action`, () => {
+    const takeLatestDescriptor = getDataSagaGenerator.next().value;
+    expect(takeLatestDescriptor).toEqual(takeLatest(TYPE.GET_NOTES, getNotes));
   });
 });
