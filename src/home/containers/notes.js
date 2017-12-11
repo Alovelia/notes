@@ -5,7 +5,7 @@ import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
 import Notes from '../components/notes';
 import { ACTION } from '../reducer';
-// import { makeSelectNotes } from '../selectors';
+import { makeSelectNotes } from '../selectors';
 
 export class NotesContainer extends Component {
   componentDidMount() {
@@ -29,8 +29,9 @@ NotesContainer.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  // notes: makeSelectNotes()
+  notes: makeSelectNotes()
 });
+
 const mapDispatchToProps = {
   getNotes: ACTION.getNotes,
   //†action

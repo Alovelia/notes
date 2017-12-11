@@ -7,10 +7,15 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import ErrorBoundary from 'react-error-boundary';
 import Title from 'common/title/title';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import createMuiTheme from 'material-ui/styles/createMuiTheme';
+import 'typeface-roboto/index.css';
+
+const theme = createMuiTheme();
 
 export default function Layout(props) {
   return (
-    <div>
+    <MuiThemeProvider theme={theme}>
       <Helmet
         titleTemplate="%s"
         defaultTitle="..."
@@ -25,7 +30,7 @@ export default function Layout(props) {
         {React.Children.toArray(props.children)}
       </ErrorBoundary>
       {/*<Footer />*/}
-    </div>
+    </MuiThemeProvider>
   );
 }
 

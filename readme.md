@@ -68,3 +68,5 @@ I have an issue at the moment with routes config.
 Such files: require('./containers/d3').default should have at least
 2 exports otherwise such modules will be exported in different format
 and will be invisible.
+
+14. https://material.io/icons - here we can download any svg icon
