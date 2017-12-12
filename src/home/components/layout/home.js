@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Grid from 'material-ui/Grid';
 import { FormattedMessage } from 'react-intl';
-import './home.css';
 import Folders from '../../containers/folders';
-
 
 class HomeComponent extends Component {
   state = {
@@ -16,10 +14,10 @@ class HomeComponent extends Component {
     // console.info(this.props.folders);
     return (
       <div style={{ padding: `${spacing / 2}px` }}><Grid container spacing={spacing}>
-        <Grid item xs={3}>
+        <Grid item xs={4} sm={3}>
           <Folders />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={8} sm={9}>
           {this.props.children}
         </Grid>
       </Grid></div>

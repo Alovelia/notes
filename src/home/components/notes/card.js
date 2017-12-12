@@ -8,7 +8,7 @@ import { Media, MediaFigure, MediaBody } from 'common/components/media/media';
 
 export default class Note extends Component {
   render() {
-    return (<Grid item xs={3}>
+    return (<Grid item md={3} sm={6} xs={12}>
       <Card >
         <Media>
           <MediaFigure>
