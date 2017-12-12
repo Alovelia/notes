@@ -1,0 +1,16 @@
+.Media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Media__figure {
+  margin-right: 1rem;
+}
+  .Media__figure--right{
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+.Media__body {
+  flex: 1;
+}

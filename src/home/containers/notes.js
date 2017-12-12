@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
-import Notes from '../components/notes';
+import Notes from '../components/notes/notes';
 import { ACTION } from '../reducer';
 import { makeSelectNotes } from '../selectors';
 

@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import noop from 'lodash/noop';
-import Home from '../home';
+import Home from '../layout/home';
 import { ACTION } from '../../reducer';
 
 describe('<Home />', () => {

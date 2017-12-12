@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
-import Home from '../components/home';
+import Home from '../components/layout/home';
 import { ACTION } from '../reducer';
 import { makeSelectFolders } from '../selectors';
 
