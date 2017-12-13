@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import Card from './card';
 import { Media, MediaFigure, MediaBody } from '../../../__common__/components/media/media';
 
-
 class Notes extends Component {
   render() {
     return (<Grid container>

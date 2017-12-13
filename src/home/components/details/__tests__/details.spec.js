@@ -1,23 +1,23 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import noop from 'lodash/noop';
-import Home from '../layout/home';
-import { ACTION } from '../../reducer';
+import Details from '../details';
+import { ACTION } from '../../../reducer';
 
-describe('<Home />', () => {
+describe('<Details />', () => {
   let wrapper;
   let stub;
   beforeAll(() => {
-    stub = sinon.stub(ACTION, 'get').returns({ type: 'mock' });
+    // stub = sinon.stub(ACTION, 'get').returns({ type: 'mock' });
   });
   afterAll(() => {
-    stub.restore();
+    // stub.restore();
   });
   it('when initializing, the expected output is rendered', () => {
     const props = {
-      trigger: noop
+      // trigger: noop
     };
-    wrapper = shallow(<Home {...props} />);
+    wrapper = shallow(<Details {...props} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

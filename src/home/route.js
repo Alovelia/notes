@@ -4,6 +4,7 @@ import { getAsyncInjectors } from 'common/async-injectors';
 
 const { path, name } = routingConfig['folders'];
 const { path: notesPath, name: notesName } = routingConfig['notes'];
+const { path: detailsPath, name: detailsName } = routingConfig['details'];
 
 export default (store) => {
   // #if process.env.NODE_ENV === 'production'
@@ -44,18 +45,51 @@ export default (store) => {
         path: notesPath,
         name: notesName,
         // #if process.env.NODE_ENV !== 'production'
+        component: {
         // eslint-disable-next-line
-      component: require('./containers/notes').default,
+          notes: require('./containers/notes').default
+        },
         // #endif
         // #if process.env.NODE_ENV === 'production'
         async getComponent(nextState, cb) {
           try {
             const [
-              component,
+              notes,
             ] = await Promise.all([
-            import('./containers/notes' /* webpackChunkName: "notes" */),
+              import('./containers/notes' /* webpackChunkName: "notes" */),
             ]);
-            cb(null, component.default);
+            cb(null, { notes: notes.default });
+          } catch (e) {
+            errorLoading(e);
+          }
+        },
+        // #endif
+      },
+      {
+        path: detailsPath,
+        name: detailsName,
+        // #if process.env.NODE_ENV !== 'production'
+        component: {
+        // eslint-disable-next-line
+          notes: require('./containers/notes').default,
+          // eslint-disable-next-line
+          details: require('./containers/details').default,
+        },
+        // #endif
+        // #if process.env.NODE_ENV === 'production'
+        async getComponent(nextState, cb) {
+          try {
+            const [
+              notes,
+              details,
+            ] = await Promise.all([
+              import('./containers/notes' /* webpackChunkName: "notes" */),
+              import('./containers/details' /* webpackChunkName: "details" */),
+            ]);
+            cb(null, {
+              notes: notes.default,
+              details: details.default,
+            });
           } catch (e) {
             errorLoading(e);
           }

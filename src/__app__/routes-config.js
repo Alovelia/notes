@@ -12,5 +12,10 @@ export const routingConfig = {
     name: 'notes',
     title: 'home.title',
   },
+  'details': {
+    path: '/:id/:noteid',
+    name: 'details',
+    title: 'home.title',
+  },
   //†route
 };

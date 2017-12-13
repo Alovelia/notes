@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Media /> when initializing, the expected output is rendered 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Media>
+    <MediaFigure
+      className={null}
+    >
+      <div>
+        MOCK FIGURE
+      </div>
+    </MediaFigure>
+    <MediaBody>
+      <div>
+        MOCK BODY
+      </div>
+    </MediaBody>
+  </Media>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <MediaFigure
+          className={null}
+        >
+          <div>
+            MOCK FIGURE
+          </div>
+        </MediaFigure>,
+        <MediaBody>
+          <div>
+            MOCK BODY
+          </div>
+        </MediaBody>,
+      ],
+      "className": "Media",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": ".0",
+        "nodeType": "function",
+        "props": Object {
+          "children": <div>
+            MOCK FIGURE
+          </div>,
+          "className": null,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MOCK FIGURE",
+          },
+          "ref": null,
+          "rendered": "MOCK FIGURE",
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": ".1",
+        "nodeType": "function",
+        "props": Object {
+          "children": <div>
+            MOCK BODY
+          </div>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MOCK BODY",
+          },
+          "ref": null,
+          "rendered": "MOCK BODY",
+          "type": "div",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <MediaFigure
+            className={null}
+          >
+            <div>
+              MOCK FIGURE
+            </div>
+          </MediaFigure>,
+          <MediaBody>
+            <div>
+              MOCK BODY
+            </div>
+          </MediaBody>,
+        ],
+        "className": "Media",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": ".0",
+          "nodeType": "function",
+          "props": Object {
+            "children": <div>
+              MOCK FIGURE
+            </div>,
+            "className": null,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "MOCK FIGURE",
+            },
+            "ref": null,
+            "rendered": "MOCK FIGURE",
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": ".1",
+          "nodeType": "function",
+          "props": Object {
+            "children": <div>
+              MOCK BODY
+            </div>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "MOCK BODY",
+            },
+            "ref": null,
+            "rendered": "MOCK BODY",
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<Media /> when initializing, the expected output is rendered if MediaFigure is not the first 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Media>
+    <MediaBody>
+      <div>
+        MOCK BODY
+      </div>
+    </MediaBody>
+    <MediaFigure
+      className={null}
+    >
+      <div>
+        MOCK FIGURE
+      </div>
+    </MediaFigure>
+  </Media>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <MediaBody>
+          <div>
+            MOCK BODY
+          </div>
+        </MediaBody>,
+        <MediaFigure
+          className="Media__figure--right"
+        >
+          <div>
+            MOCK FIGURE
+          </div>
+        </MediaFigure>,
+      ],
+      "className": "Media",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": ".0",
+        "nodeType": "function",
+        "props": Object {
+          "children": <div>
+            MOCK BODY
+          </div>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MOCK BODY",
+          },
+          "ref": null,
+          "rendered": "MOCK BODY",
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": ".1",
+        "nodeType": "function",
+        "props": Object {
+          "children": <div>
+            MOCK FIGURE
+          </div>,
+          "className": "Media__figure--right",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MOCK FIGURE",
+          },
+          "ref": null,
+          "rendered": "MOCK FIGURE",
+          "type": "div",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <MediaBody>
+            <div>
+              MOCK BODY
+            </div>
+          </MediaBody>,
+          <MediaFigure
+            className="Media__figure--right"
+          >
+            <div>
+              MOCK FIGURE
+            </div>
+          </MediaFigure>,
+        ],
+        "className": "Media",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": ".0",
+          "nodeType": "function",
+          "props": Object {
+            "children": <div>
+              MOCK BODY
+            </div>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "MOCK BODY",
+            },
+            "ref": null,
+            "rendered": "MOCK BODY",
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": ".1",
+          "nodeType": "function",
+          "props": Object {
+            "children": <div>
+              MOCK FIGURE
+            </div>,
+            "className": "Media__figure--right",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "MOCK FIGURE",
+            },
+            "ref": null,
+            "rendered": "MOCK FIGURE",
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

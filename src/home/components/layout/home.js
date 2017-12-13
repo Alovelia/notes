@@ -11,14 +11,16 @@ class HomeComponent extends Component {
   render() {
     // const spacing = this.state.spacing;
     const { spacing } = this.state; // object destruction
-    // console.info(this.props.folders);
     return (
       <div style={{ padding: `${spacing / 2}px` }}><Grid container spacing={spacing}>
         <Grid item xs={4} sm={3}>
           <Folders />
         </Grid>
-        <Grid item xs={8} sm={9}>
-          {this.props.children}
+        <Grid item xs={2} sm={3}>
+          {this.props.notes}
+        </Grid>
+        <Grid item xs={6} sm={6}>
+          {this.props.details}
         </Grid>
       </Grid></div>
     );
@@ -26,11 +28,15 @@ class HomeComponent extends Component {
 }
 
 HomeComponent.propTypes = {
-  children: PropTypes.node
+  // children: PropTypes.node
+  notes: PropTypes.node,
+  details: PropTypes.node,
 };
 
 HomeComponent.defaultProps = {
-  children: null
+  // children: null,
+  notes: null,
+  details: null,
 };
 
 export default HomeComponent;
