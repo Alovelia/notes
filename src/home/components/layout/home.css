@@ -1,0 +1,18 @@
+.height-class{
+  height:100%
+}
+#wrapper{
+  height: 100%;
+  display:flex;
+}
+
+#id1{
+  background: wheat;
+}
+
+#id2{
+  background: lightgreen;
+}
+
+
+
